@@ -423,10 +423,11 @@
   </ItemDefinitionGroup>
   <ItemGroup />
   <ItemGroup>
-    <ClCompile Include="Device.cpp" />
     <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="BaseApp.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Source\BaseApp.cpp" />
+    <ClCompile Include="Source\Device.cpp" />
+    <ClCompile Include="Source\DeviceContext.cpp" />
+    <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Engine.fx">
@@ -439,11 +440,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseApph.h" />
-    <ClInclude Include="Device.h" />
-    <ClInclude Include="PreRequisites.h" />
-    <CLInclude Include="resource.h" />
-    <ClInclude Include="window.h" />
+    <ClInclude Include="Include\BaseApph.h" />
+    <ClInclude Include="Include\Device.h" />
+    <ClInclude Include="Include\DeviceContext.h" />
+    <ClInclude Include="Include\PreRequisites.h" />
+    <ClInclude Include="Include\Resource.h" />
+    <ClInclude Include="Include\swap chain.h" />
+    <ClInclude Include="Include\window.h" />
     <ResourceCompile Include="Engine.rc" />
   </ItemGroup>
   <ItemGroup>

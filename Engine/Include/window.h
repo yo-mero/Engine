@@ -4,8 +4,8 @@
 class
 	window {
 public:
-	Window() = default;
-	~Window() = default;
+	window() = default;
+	~window() = default;
 
 	HRESULT Init(HINSTANCE hInstance, int nCmdShow, WNDPROC wndproc);
 	void update();
@@ -13,8 +13,8 @@ public:
 	void destroy();
 public:
 	HWND m_hWnd = nullptr;
-	using int m_width;
-	using int m_height;
+	unsigned int m_width;
+	unsigned int m_height;
 private:
 	HINSTANCE m_hInst = nullptr;
 	RECT m_rect;

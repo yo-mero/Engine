@@ -20,13 +20,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BaseApp.cpp">
+    <ClCompile Include="Source\Device.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="Source\BaseApp.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Device.cpp">
+    <ClCompile Include="Source\Window.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DeviceContext.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,25 +42,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <CLInclude Include="resource.h">
-      <Filter>Resource Files</Filter>
-    </CLInclude>
     <ResourceCompile Include="Engine.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-    <ClInclude Include="BaseApph.h">
+    <ClInclude Include="Include\BaseApph.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="PreRequisites.h">
+    <ClInclude Include="Include\Device.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="Device.h">
+    <ClInclude Include="Include\PreRequisites.h">
       <Filter>Include</Filter>
     </ClInclude>
-    <ClInclude Include="window.h">
+    <ClInclude Include="Include\window.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\swap chain.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DeviceContext.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
