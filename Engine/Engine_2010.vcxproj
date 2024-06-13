@@ -425,8 +425,13 @@
   <ItemGroup>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Source\BaseApp.cpp" />
+    <ClCompile Include="Source\dephstencilView.cpp" />
     <ClCompile Include="Source\Device.cpp" />
     <ClCompile Include="Source\DeviceContext.cpp" />
+    <ClCompile Include="Source\RenderTargetView.cpp" />
+    <ClCompile Include="Source\SwapChain.cpp" />
+    <ClCompile Include="Source\Texture.cpp" />
+    <ClCompile Include="Source\viewPort.cpp" />
     <ClCompile Include="Source\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -441,11 +446,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\BaseApph.h" />
+    <ClInclude Include="Include\dephstencilView.h" />
     <ClInclude Include="Include\Device.h" />
     <ClInclude Include="Include\DeviceContext.h" />
     <ClInclude Include="Include\PreRequisites.h" />
+    <ClInclude Include="Include\RenderTargetView.h" />
     <ClInclude Include="Include\Resource.h" />
     <ClInclude Include="Include\swap chain.h" />
+    <ClInclude Include="Include\Texture.h" />
+    <ClInclude Include="Include\viewPort.h" />
     <ClInclude Include="Include\window.h" />
     <ResourceCompile Include="Engine.rc" />
   </ItemGroup>
