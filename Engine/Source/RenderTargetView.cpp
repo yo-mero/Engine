@@ -11,6 +11,8 @@ void RenderTargetView::init(Device device, Texture backBuffer, DXGI_FORMAT Forma
         ERROR("RenderTargetView", "init", "Check for Device device")
             exit(1);
     }
+    /*Verifica si device.m_device y backBuffer.m_texture no son nullptr.Si alguno es nullptr,
+        muestra un mensaje de error y sale del programa.*/
     else if (backBuffer.m_texture == nullptr)
     {
         ERROR("RenderTargetView", "init", "Checkfor Texture backBuffer")
@@ -42,8 +44,13 @@ void RenderTargetView::render(DeviceContext& deviceContext, DepthStencilView& de
         &m_renderTargetView, depthStencilView.m_DepthStencilView);
 
 }
+//Limpieza de la Vista de Destino de Renderizado :
+//Limpia la vista de destino de renderizado usando el color de limpieza proporcionado.
+//Establecimiento de los Objetivos de Renderizado :
+//Configura los objetivos de renderizado(OMSetRenderTargets) con la vista de destino de renderizado y la vista de profundidad / esténcil.
 
 void RenderTargetView::destroy()
 {
     SAFE_RELEASE(m_renderTargetView);
-}
+}/*Utiliza la macro SAFE_RELEASE para liberar de manera segura la vista de destino de renderizado(m_renderTargetView), 
+asegurando que no se produzcan fugas de memoria.*/

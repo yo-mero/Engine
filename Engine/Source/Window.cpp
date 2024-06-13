@@ -40,7 +40,16 @@ HRESULT window::Init(HINSTANCE hInstance, int nCmdShow, WNDPROC wndproc)
 
     return S_OK;
 }
+//Define una estructura WNDCLASSEX(wcex) que describe las características de la clase de ventana que se va a registrar.
+//Carga un ícono y un cursor para la ventana.
+//Configura el nombre de clase como "TutorialWindowClass".
+//Registra la clase usando RegisterClassEx.
 
+//Crea la ventana usando los parámetros definidos en wcex.
+//Ajusta el tamaño de la ventana usando AdjustWindowRect.
+//Establece el nombre de la ventana(m_windowName) y muestra la ventana usando ShowWindow.
+
+//Obtiene las dimensiones del cliente de la ventana y calcula el ancho y alto de la ventana(m_width y m_height).
 void window::update()
 {
 }

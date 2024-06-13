@@ -22,7 +22,9 @@ HRESULT Texture::init(Device device, std::string TextureName)
 	}
 	return hr;
 }
-
+//Verifica si device.m_device no es nullptr.Si es nullptr, muestra un mensaje de error y sale del programa.
+//Utiliza D3DX11CreateShaderResourceViewFromFile para cargar la textura desde un archivo.Si falla, muestra un 
+//mensaje de error y sale del programa.
 void Texture::init(Device device, unsigned int width, unsigned int height, DXGI_FORMAT Format, unsigned int Bindflags)
 {
 	if (device.m_device == nullptr)
@@ -63,6 +65,10 @@ void Texture::init(Device device, unsigned int width, unsigned int height, DXGI_
 			exit(1);
 	}
 }
+//Verifica si device.m_device no es nullptr y si width y height son mayores que 0. Si alguna condición falla, 
+//muestra un mensaje de error y sale del programa.
+//Configura un descriptor de textura(D3D11_TEXTURE2D_DESC) y llama a CreateTexture2D para crear la textura.Si falla,
+//muestra un mensaje de error y sale del programa.
 
 void Texture::update()
 {
@@ -77,7 +83,8 @@ void Texture::render(DeviceContext& deviceContext, unsigned int StartSlot, unsig
 		deviceContext.PSSetShaderResources(StartSlot, NumViews, &m_textureFromImg);
 	}
 }
-
+//Establece la textura como recurso de sombreado en el dispositivo de contexto(deviceContext)
+//.Si m_textureFromImg no es nullptr, establece la textura desde la imagen.
 void Texture::destroy()
 {
 	if (m_texture != nullptr)
@@ -89,7 +96,8 @@ void Texture::destroy()
 		SAFE_RELEASE(m_textureFromImg);
 	}
 }
-
+//Utiliza la macro SAFE_RELEASE para liberar de manera segura m_texture o m_textureFromImg,
+//asegurando que no se produzcan fugas de memoria.
 
 
 

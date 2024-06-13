@@ -76,6 +76,14 @@ void SwapChain::init(Device& device, DeviceContext& deviceContext, Texture& back
 			exit(1);
 	}
 }
+//Verifica si window.m_hWnd no es nullptr.Si es nullptr, muestra un mensaje de error y sale del programa.
+//Configuración de DXGI_SWAP_CHAIN_DESC :
+//Configura la descripción de la cadena de intercambio(sd) con las características adecuadas(ancho, alto, formato, tasa de refresco, etc.).
+//Creación del Dispositivo y la Cadena de Intercambio :
+//Intenta crear el dispositivo y la cadena de intercambio con diferentes tipos de controlador(driverTypes).Si falla en todas las pruebas, 
+// muestra un mensaje de error y sale del programa.
+//Creación de la Vista de Destino de Renderizado :
+//Obtiene el búfer de la cadena de intercambio y lo asigna a backBuffer.m_texture.Si falla, muestra un mensaje de error y sale del programa.
 
 void SwapChain::update()
 {
@@ -89,9 +97,10 @@ void SwapChain::destroy()
 {
 	SAFE_RELEASE(m_swapChain);
 }
-
+//Utiliza la macro SAFE_RELEASE para liberar de manera segura la cadena de intercambio(m_swapChain), asegurando que no se produzcan fugas de memoria.
 
 void SwapChain::present()
 {
 	m_swapChain->Present(0, 0);
 }
+//Llama a Present en la cadena de intercambio para mostrar el contenido renderizado en la pantalla.

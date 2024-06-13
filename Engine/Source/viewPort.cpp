@@ -17,7 +17,9 @@ void Viewport::init(window window)
     m_viewport.TopLeftY = 0;
 
 }
-
+//Verifica si window.m_hWnd no es nullptr.Si lo es, muestra un mensaje de error y sale del programa.
+//Configura el viewport(m_viewport) utilizando las dimensiones de la ventana proporcionadas(window.m_width y window.m_height).
+//Establece MinDepth y MaxDepth a valores estándar y TopLeftX, TopLeftY a 0.
 void Viewport::update()
 {
 }
@@ -26,7 +28,8 @@ void Viewport::render(DeviceContext& deviceContext)
 {
     deviceContext.RSSetViewports(1, &m_viewport);
 }
-
+//Utiliza deviceContext.RSSetViewports para establecer el
+//viewport en el contexto del dispositivo.m_viewport contiene la configuración del viewport que se aplicará.
 void Viewport::destroy()
 {
 }
