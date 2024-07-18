@@ -2,6 +2,7 @@
 //Librerias STD
 #include <windows.h>
 #include <xnamath.h>
+#include <vector>
 #include <string>
 #include <sstream>
 //Librerias DirectX
@@ -37,9 +38,50 @@
    OutputDebugStringW( os_.str().c_str() );  \
 }
 
-#define ERROR( classObj, method, errorMSG )   \
+#define ERROR( classObj, method, errorMSG )  \
 {                                            \
    std::wostringstream os_;                  \
    os_ << "ERROR : " << classObj << "::" << method << " : " << "  Error in data from params [" << errorMSG << "] \n"; \
    OutputDebugStringW( os_.str().c_str() );  \
+   exit(1);                                  \
 }
+struct SimpleVertex
+{
+	XMFLOAT3 Pos;
+	XMFLOAT2 Tex;
+};
+
+struct CBNeverChanges
+{
+	XMMATRIX mView;
+};
+
+struct CBChangeOnResize
+{
+	XMMATRIX mProjection;
+};
+
+struct CBChangesEveryFrame
+{
+	XMMATRIX mWorld;
+	XMFLOAT4 vMeshColor;
+};
+enum ShaderType
+{
+	PIXEL_SHADER = 0,
+	VERTEX_SHADER = 1
+};
+enum ExtensionType
+{
+	DDS = 0,
+	PNG = 1,
+	JPG = 2
+};
+struct Mesh
+{
+	std::string name;
+	std::vector <SimpleVertex> vertex;
+	std::vector <unsigned int> index;
+	int numVertex;
+	int numIndex;
+};

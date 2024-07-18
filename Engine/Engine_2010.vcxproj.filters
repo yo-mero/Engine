@@ -47,6 +47,21 @@
     <ClCompile Include="Source\RenderTargetView.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Buffer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputLayout.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SampleState.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ShaderProgram.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ModelLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp" />
@@ -93,6 +108,27 @@
       <Filter>Include</Filter>
     </ClInclude>
     <ClInclude Include="Include\RenderTargetView.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Buffer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\InputLayout.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SampleState.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ShaderProgram.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ModelLoader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\fbx\fbxsdk.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\stb_image.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -11,7 +11,7 @@ class SwapChain
 {
 public:
 	SwapChain() = default;
-	~SwapChain()=default;
+	~SwapChain() = default;
 
 
 	void init(Device& device, DeviceContext& deviceContext, Texture& backBuffer, window window);

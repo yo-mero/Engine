@@ -40,6 +40,10 @@ void DepthStencilView::init(Device& device, Texture& depthStencil, DXGI_FORMAT f
 
 }
 
+void DepthStencilView::update()
+{
+}
+
 void DepthStencilView::render(DeviceContext& deviceContext)
 {
 	deviceContext.m_deviceContext->ClearDepthStencilView(m_DepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);
