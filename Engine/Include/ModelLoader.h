@@ -1,7 +1,7 @@
 #pragma once
 #include "PreRequisites.h"
 #include "fbxsdk.h"
-
+#include "MeshComponent.h"
 // Clase para cargar modelos 3D usando el SDK de FBX
 class ModelLoader
 {
@@ -33,5 +33,5 @@ private:
 	std::vector<unsigned int> indices;	 // Índices del modelo
 	std::vector<std::string> textureFileName;	// Nombres de archivos de textura del modelo
 public:
-	std::vector<Mesh> meshes;	// Mallas del modelo
+	std::vector<MeshComponent> meshes;	// Mallas del modelo
 };

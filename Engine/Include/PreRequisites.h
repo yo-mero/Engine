@@ -5,6 +5,9 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <xnamath.h>
+#include <memory>
+#include <thread>
 //Librerias DirectX
 #include <d3d11.h>
 #include <d3dx11.h>
@@ -12,7 +15,7 @@
 #include "resource.h"
 
 //Third Paties
-// MACRO for safe release of resources
+#include "Utilities/Memory/TSharedPointer.h"
 #define SAFE_RELEASE(x) if(x != nullptr) x->Release(); x = nullptr;
 
 //// * To check monster
