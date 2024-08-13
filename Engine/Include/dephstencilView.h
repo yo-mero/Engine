@@ -7,8 +7,7 @@ class DeviceContext;
 class Texture;
 
 // Clase DepthStencilView que maneja una vista de stencil de profundidad en DirectX 11
-class DepthStencilView
-{
+class DepthStencilView{
 public:
 	// Constructor y destructor por defecto
 	DepthStencilView() = default;

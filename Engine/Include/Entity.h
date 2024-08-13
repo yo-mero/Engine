@@ -14,8 +14,7 @@ class DeviceContext;
 *y que se puedan actualizar y renderizar
 */
 
-class Entity
-{
+class Entity{
 public:
 	//destructor virtual
 	virtual ~Entity() = default;

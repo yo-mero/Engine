@@ -6,8 +6,7 @@ class DeviceContext;
 * Tipos de componentes disponibles en el juego.
 */
 
-enum ComponentType
-{
+enum ComponentType{
 	NONE = 0,		///Tipo de componente no especificado
 	TRANSFORM = 1,	///Componente de transformación
 	MESH = 2,		///componente de la malla.
@@ -22,8 +21,7 @@ enum ComponentType
 * permitiendo actualizar y renderizar el componente , asi como obtener su tipo.
 */
 
-class Component
-{
+class Component{
 public:
 	/*Constructor por defecto*/
 	Component() = default;

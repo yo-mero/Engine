@@ -1,8 +1,7 @@
 ﻿#pragma once
 #include "PreRequisites.h"
 
-class Device
-{
+class Device{
 public:
     Device() = default;
     ~Device() = default;

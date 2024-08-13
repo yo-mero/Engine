@@ -16,8 +16,7 @@
 #include "ModelLoader.h"
 #include "UserInterface.h"
 #include "Actor.h"
-class BaseApp
-{
+class BaseApp{
 public:
     BaseApp() = default;
     ~BaseApp() = default;
@@ -43,25 +42,25 @@ public:
         CreateGrid(int width, int depth, float spacing);
 private:
     window                                  m_window;
-    Device								      	          m_device;
-    DeviceContext							              m_deviceContext;
-    SwapChain							      	          m_swapchain;
-    Texture									                m_BackBuffer;
-    Texture								                	m_DepthStencil;
-    DepthStencilView					  	          m_depthStencilView;
-    RenderTargetView					  	          m_RenderTargetView;
-    Viewport								                m_viewport;
-    ShaderProgram							              m_shaderProgram;
-    std::vector<Buffer>						          m_vertexBuffers;
-    std::vector<Buffer>						          m_indexBuffers;
-    Buffer									                m_CBBufferNeverChanges;
-    Buffer								      	          m_CBBufferChangeOnResize;
-    Buffer								      	          m_CBBufferChangesEveryFrame;
-    std::vector<Texture>					          modelTextures;
-    SamplerState						    	          m_sampler;
-    ModelLoader							    	          m_model;
-    Texture								      	          m_default;
-    std::vector<Texture>					          gridTexs;
+    Device								    m_device;
+    DeviceContext							m_deviceContext;
+    SwapChain							    m_swapchain;
+    Texture									m_BackBuffer;
+    Texture								    m_DepthStencil;
+    DepthStencilView					    m_depthStencilView;
+    RenderTargetView					  	m_RenderTargetView;
+    Viewport								m_viewport;
+    ShaderProgram							m_shaderProgram;
+    std::vector<Buffer>						m_vertexBuffers;
+    std::vector<Buffer>						m_indexBuffers;
+    Buffer									m_CBBufferNeverChanges;
+    Buffer								    m_CBBufferChangeOnResize;
+    Buffer								    m_CBBufferChangesEveryFrame;
+    std::vector<Texture>					modelTextures;
+    SamplerState						    m_sampler;
+    ModelLoader							    m_model;
+    Texture								    m_default;
+    std::vector<Texture>					gridTexs;
     UserInterface                           m_UserInterface;
     //XMMATRIX                              m_World;
     XMMATRIX                                m_View;

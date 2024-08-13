@@ -16,8 +16,7 @@ class MeshComponent;
  * texturas y varios componentes. Proporciona metodos para actualizar , renderizar, y destruir un actor.
 */
 
-class Actor : public Entity
-{
+class Actor : public Entity{
 public:
 	/*Constructor por defecto*/
 	Actor() = default;
@@ -75,13 +74,10 @@ private:
 	std::string m_name = "Actor";
 };
 template <typename T>
-inline std::shared_ptr<T> Actor::getComponent()
-{
-	for (auto& component : components)
-	{
+inline std::shared_ptr<T> Actor::getComponent(){
+	for (auto& component : components){
 		std::shared_ptr<T> specificComponent = std::dynamic_pointer_cast<T>(component);
-		if (specificComponent)
-		{
+		if (specificComponent){
 			return specificComponent;
 		}
 	}

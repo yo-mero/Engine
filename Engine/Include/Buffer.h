@@ -11,8 +11,7 @@ class MeshComponent;
 /// Los buffers son fundamentales para la eficiencia y la gestión 
 /// de recursos en la representación de gráficos. 
 ///                  </summary>
-class Buffer
-{
+class Buffer{
 public:
 	Buffer() = default;
 	~Buffer() = default;
